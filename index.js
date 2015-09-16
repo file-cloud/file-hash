@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (next, filename, type, capital) {
+module.exports = function (next, filename, type, upper) {
   var fs = require('fs');
   if (!fs.existsSync(filename)) {
     throw Error(filename + " not exists");
@@ -11,7 +11,7 @@ module.exports = function (next, filename, type, capital) {
   hash.setEncoding('hex');
   fd.on('end', function () {
     hash.end();
-    if (capital) {
+    if (upper) {
       return     next(hash.read().toUpperCase());
     }
     next(hash.read());
