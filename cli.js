@@ -13,9 +13,6 @@ var cli = meow({
     '  fash a.jpg --type md5'
   ].join('\n')
 });
-
-console.log(process.env.PWD);
-
 fileHash(function(hash) {
   console.log(hash);
 }, path.resolve(process.env.PWD, cli.input[0]), cli.flags.type, cli.flags.case === 'upper');
