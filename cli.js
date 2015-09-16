@@ -14,6 +14,8 @@ var cli = meow({
   ].join('\n')
 });
 
+console.log(process.env.PWD);
+
 fileHash(function(hash) {
   console.log(hash);
-}, path.resolve(__dirname, cli.input[0]), cli.flags.type, cli.flags.case === 'upper');
+}, path.resolve(process.env.PWD, cli.input[0]), cli.flags.type, cli.flags.case === 'upper');
