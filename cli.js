@@ -10,7 +10,8 @@ var cli = meow({
     '  fash filename [--type sha1] [--case upper]',
     '',
     'Example',
-    '  fash a.jpg --type md5'
+    '  fash a.jpg --type md5',
+    '  fash a.jpg --type sha1 --case upper'
   ].join('\n')
 });
 fileHash(function(hash) {

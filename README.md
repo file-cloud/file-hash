@@ -33,7 +33,14 @@ fileHash(function (hash) {
 
 ```sh
 $ npm install --global file-hash
-$ file-hash --help
+$ fash --help
+$ fash  a.txt 
+//9a3f2bdd77e0bd4c87e954e154f05d525c85f844
+$ fash a.jpg --type md5
+//969996c794949bbf0e40827cefc98f2d
+$ fash a.jpg --type md5 --case upper
+//969996C794949BBF0E40827CEFC98F2D
+
 ```
 
 

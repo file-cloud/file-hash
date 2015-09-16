@@ -25,7 +25,6 @@ describe('file-hash node module', function () {
       fileHash(function () {
       }, path.resolve(__dirname, 'b.txt'), 'sha1', true);
     } catch (e) {
-      console.log(e);
       assert.equal(true, e instanceof Error);
       assert.equal(true, e.message === path.resolve(__dirname, 'b.txt') + ' not exists');
       done();
